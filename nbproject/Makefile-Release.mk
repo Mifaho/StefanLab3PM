@@ -35,9 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Buy_order.o \
-	${OBJECTDIR}/Sell_order.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/order.o \
 	${OBJECTDIR}/p_queue.o
 
 
@@ -65,20 +64,15 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/stefanlab3pm.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/stefanlab3pm ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Buy_order.o: Buy_order.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Buy_order.o Buy_order.cpp
-
-${OBJECTDIR}/Sell_order.o: Sell_order.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sell_order.o Sell_order.cpp
-
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/order.o: order.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/order.o order.cpp
 
 ${OBJECTDIR}/p_queue.o: p_queue.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -15,12 +15,31 @@
 
 template<class T>
 
-p_queue::p_queue() {
+
+p_queue<T>::p_queue() {
 }
 
-p_queue::p_queue(const p_queue& orig) {
+template <class T>
+p_queue<T>::p_queue(const p_queue& orig) {
 }
 
-p_queue::~p_queue() {
+template <class T>
+p_queue<T>::~p_queue() {
+}
+
+template <class T>
+T p_queue<T>::pop(){
+    
+}
+
+template <class T>
+void p_queue<T>::push(T e, size_t priority){
+    std::vector<int>::iterator iter1;
+    queue.push_back(std::make_pair(e, priority));
+    std::pair<T, size_t>* iter = queue.end();
+    while(iter != queue.begin() && (iter - 1)->second > iter->second){
+        std::swap(*(iter - 1), *iter);
+        iter--;
+    }
 }
 

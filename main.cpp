@@ -12,14 +12,19 @@
  */
 
 #include <cstdlib>
+#include "p_queue.h"
 
 using namespace std;
 
 /*
  * 
  */
-int main(int argc, char** argv) {
+using namespace std;
 
+int main(int argc, char** argv) {
+    p_queue<int> queue();
+    int number = 1;
+    queue.push(number, 1);
     return 0;
 }
 

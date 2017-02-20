@@ -4,8 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Buy_order.h</itemPath>
-      <itemPath>Sell_order.h</itemPath>
+      <itemPath>order.h</itemPath>
       <itemPath>p_queue.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -15,9 +14,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Buy_order.cpp</itemPath>
-      <itemPath>Sell_order.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>order.cpp</itemPath>
       <itemPath>p_queue.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -42,15 +40,11 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="Buy_order.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Buy_order.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Sell_order.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Sell_order.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="order.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="order.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="p_queue.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -77,15 +71,11 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Buy_order.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Buy_order.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Sell_order.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Sell_order.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="order.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="order.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="p_queue.cpp" ex="false" tool="1" flavor2="0">
       </item>

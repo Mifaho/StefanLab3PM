@@ -14,17 +14,22 @@
 #ifndef P_QUEUE_H
 #define P_QUEUE_H
 
+#include <cstdlib>
+#include <queue>
+#include <vector>
+#include <utility>
+
 template <class T>
 
 class p_queue {
 public:
     p_queue();
     p_queue(const p_queue& orig);
-    virtual ~p_queue();
+    ~p_queue();
     T pop();
-    void push(T e);
+    void push(T e, size_t priority);
 private:
-
+    std::vector<std::pair<T,size_t> > queue;
 };
 
 #endif /* P_QUEUE_H */
