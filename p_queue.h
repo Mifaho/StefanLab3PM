@@ -18,18 +18,19 @@
 #include <queue>
 #include <vector>
 #include <utility>
+#include <iostream>
 
-template <class T>
+template <typename T>
 
 class p_queue {
-public:
+public:/*
     p_queue();
     p_queue(const p_queue& orig);
     ~p_queue();
-    T pop();
-    void push(T e, size_t priority);
+    T pop();*/
+    void push(T e);
 private:
-    std::vector<std::pair<T,size_t> > queue;
+    std::vector<T> queue;
 };
 
 #endif /* P_QUEUE_H */

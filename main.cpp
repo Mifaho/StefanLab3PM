@@ -13,18 +13,23 @@
 
 #include <cstdlib>
 #include "p_queue.h"
+#include "Order.h"
 
 using namespace std;
 
 /*
  * 
  */
-using namespace std;
+
 
 int main(int argc, char** argv) {
-    p_queue<int> queue();
-    int number = 1;
-    queue.push(number, 1);
+    p_queue<Order> queue;
+    Order order1("test1", 1);
+    Order order2("test2", 3);
+    Order order3("test3", 2);
+    queue.push(order1);
+    queue.push(order2);
+    queue.push(order3);
     return 0;
 }
 

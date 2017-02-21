@@ -12,34 +12,36 @@
  */
 
 #include "p_queue.h"
+#include "Order.h"
 
-template<class T>
-
-
+/*
+template<typename T>
 p_queue<T>::p_queue() {
 }
 
-template <class T>
-p_queue<T>::p_queue(const p_queue& orig) {
-}
 
-template <class T>
+template <typename T>
 p_queue<T>::~p_queue() {
 }
 
-template <class T>
+template <typename T>
 T p_queue<T>::pop(){
     
-}
+}*/
 
-template <class T>
-void p_queue<T>::push(T e, size_t priority){
-    std::vector<int>::iterator iter1;
-    queue.push_back(std::make_pair(e, priority));
-    std::pair<T, size_t>* iter = queue.end();
-    while(iter != queue.begin() && (iter - 1)->second > iter->second){
-        std::swap(*(iter - 1), *iter);
-        iter--;
+template <typename T>
+void p_queue<T>::push(T e) {
+    queue.push_back(e);
+    T* start = &(*queue.begin());
+    T* iter = &(*queue.end());
+    if (queue.size() > 1) {
+        while (iter != start && *(iter - 1) > *iter) {
+            std::swap(*(iter - 1), *iter);
+            iter--;
+        }
     }
 }
+
+template class p_queue<Order>;
+
 
