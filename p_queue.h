@@ -16,7 +16,7 @@
 
 #include <cstdlib>
 #include <queue>
-#include <vector>
+#include <list>
 #include <utility>
 #include <iostream>
 
@@ -30,7 +30,7 @@ public:/*
     T pop();*/
     void push(T e);
 private:
-    std::vector<T> queue;
+    std::list<T> queue;
 };
 
 #endif /* P_QUEUE_H */

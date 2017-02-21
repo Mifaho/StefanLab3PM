@@ -13,6 +13,7 @@
 
 #include "p_queue.h"
 #include "Order.h"
+#include <iostream>
 
 /*
 template<typename T>
@@ -32,12 +33,14 @@ T p_queue<T>::pop(){
 template <typename T>
 void p_queue<T>::push(T e) {
     queue.push_back(e);
-    T* start = &(*queue.begin());
-    T* iter = &(*queue.end());
+    size_t count = 0;
+    T* start = &(*(queue.begin()));
+    T* iter = &(*(queue.end())) - 1;
     if (queue.size() > 1) {
         while (iter != start && *(iter - 1) > *iter) {
             std::swap(*(iter - 1), *iter);
             iter--;
+            count++;
         }
     }
 }
